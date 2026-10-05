@@ -1,0 +1,243 @@
+@import url('./base.css');
+@import url('./utilityClasses.css');
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.profile__main__header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/assets/12.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2rem;
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__main__header h1{
+    animation: fade 1s linear forwards;
+}
+
+.main__user__dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.profile__dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.4rem;
+    width: 23%;
+    border-radius: 10px;
+    background-color: var(--font--white--color);
+    max-height: 470px;
+}
+
+
+.rentaly__dashboard{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    row-gap: 2rem;
+    transition: all 0.5s ease-in-out;
+    animation: fade 1s linear forwards;
+}
+
+
+.profile__view{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0.8rem;
+}
+
+.profile__view img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: 3px solid var(--font--primary--color);
+}
+
+.profile__view :nth-child(2){
+    color: var(--font--black--color);
+    font-weight: var(--weight--bolder);
+    font-size: 2rem;
+    text-transform: capitalize;
+    line-height: 20px;
+}
+
+.profile__view :nth-child(3){
+    color: var(--navbar--bg--color);
+    line-height: 20px;
+}
+
+.select__view{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.select__view li{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1.5rem;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.select__view li i{
+    padding: 0 0;
+    color: var(--font--primary--color);
+    font-size: 1.5rem;
+    height: 15px;
+    width: 15px;
+    background-color: var(--font--white--color);
+}
+
+.select__view li a{
+    font-size: 1.6rem;
+    display: block;
+    color: #333333;
+}
+.buttonActive{
+    border-radius: 6px;
+    background-color: var(--font--primary--color);
+    color: var(--font--white--color);
+}
+
+.select__view .buttonActive>a{
+    color: var(--font--white--color);
+    
+}
+
+.select__view .buttonActive>i{
+    color: var(--font--white--color);
+    background: transparent;
+}
+
+.rentaly__dashboard__innerbox1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+    width: 100%; 
+
+}
+
+.rentaly__spec1fication__box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--font--white--color);
+    border-radius: 10px;
+    padding: 2.4rem;
+    width: 23%;
+}
+
+.rentaly__dashboard__innerbox1 h1{
+    color: var(--font--black--color);
+    font-weight: var(--weight--semibold);
+    font-size: 5.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.rentaly__dashboard__innerbox1 p{
+    color: var(--navbar--bg--color);
+    /* font-size: 2rem; */
+}
+
+.rentaly__dashboard__innerbox1 i{
+    margin-bottom: 4rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+}
+
+.rentaly__dashboard__innerbox2{
+    background-color: var(--font--white--color);
+    width: 100%;
+    padding: 2.4rem;
+    border-radius: 10px;
+}
+
+.rentaly__dashboard__innerbox2 h4{
+    color: var(--font--black--color);
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border-bottom: 1px solid var(--navbar--bg--color);
+    padding: 1.3rem 0;
+    text-align: left;
+}
+
+table thead th {
+    font-size: 1.3rem;
+    color: var(--navbar--bg--color);
+    font-weight: var(--weight--semibold);
+    text-transform: uppercase;
+}
+
+table tbody .order__id{
+    font-weight: var(--weight--bold);
+    background-color: #F5F8FA;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.5rem;
+}
+
+table tbody tr p{
+    font-size: 1.5rem;
+}
+
+table tbody tr :nth-child(2){
+    font-weight: var(--weight--bold);
+}
+
+.status {
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.status.completed {
+    color: var(--font--white--color);
+    background-color: var(--font--primary--color);
+}
+
+.status.cancelled {
+    color: var(--font--white--color);
+    background-color: red;
+}
+
+.status.scheduled {
+    color: var(--font--white--color);
+    background-color: orange;
+}

@@ -1,0 +1,143 @@
+
+/* ==================== Car Rental Logo =================== */
+
+.logo img {
+    height: 38px;
+}
+
+/* ==================== NavBar =================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--navbar--bg--color);
+    padding: 2rem 6rem 0 6rem;
+}
+
+.nav__items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+}
+
+.nav__link {
+    z-index: var(--second--normal--z-index);
+    font-weight: var(--weight--semibold);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 60px;
+}
+
+.active{
+    color: var(--font--primary--color);
+    transition: all 0.1s ease-in-out;
+}
+
+.account__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    column-gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.account__box{
+    margin-top: -1rem;
+    height: 55px ;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    background-color: var(--font--primary--color);
+    border-radius: 100px;
+    padding: 1rem;
+    cursor: pointer;
+    margin-left: -2rem;
+}
+
+.account__box img{
+    border-radius: 50%;
+    background-color:#fff;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+.account__box p{
+    color: var(--font--white--color);
+    font-weight: var(--weight--semibold);
+    text-transform: capitalize;
+}
+
+
+.account__box img{
+    border-radius: 50%;
+    background-color:#fff;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+}
+
+.account__box p{
+    color: var(--font--white--color);
+    font-weight: var(--weight--semibold);
+}
+
+/* ==================== Hori Selector =================== */
+
+.hori-selector {
+    position: absolute;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+    background-color: var(--font--white--color);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.hori-selector::after,
+.hori-selector::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: var(--font--white--color);
+    width: 25px;
+    height: 25px;
+}
+
+.hori-selector::after {
+    right: -20%;
+}
+
+.hori-selector::before {
+    left: -20%;
+}
+
+.hori-selector .left {
+    background-color: var(--navbar--bg--color);
+    z-index: var(--second--normal--z-index);
+    position: absolute;
+    width: 45px;
+    height: 40px;
+    border-radius: 30%;
+    bottom: 0;
+    left: -37%;
+    border-bottom-right-radius: 50%;
+}
+
+.hori-selector .right {
+    background-color: var(--navbar--bg--color);
+    z-index: var(--second--normal--z-index);
+    position: absolute;
+    width: 45px;
+    height: 40px;
+    bottom: 0;
+    right: -38%;
+    border-radius: 30%;
+    border-bottom-left-radius: 50%;
+}

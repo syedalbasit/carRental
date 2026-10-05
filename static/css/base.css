@@ -1,0 +1,94 @@
+
+
+
+/* <--------------------------------------- Imports  ---------------------------------------> */
+
+/* ==================== Font =================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* <---------------------------------------  CSS  ---------------------------------------> */
+
+/* ==================== Base CSS =================== */
+
+
+:root {
+    /* ======== Body Colors ======= */
+
+    --body--main--color: #fff;
+
+    /* ======== Navbar Colors =======  */
+
+    --navbar--bg--color: #a5a5a5;
+
+    /* ======== Html Tag Colors =======  */
+
+    --font--primary--color: #1ECB15;
+    --font--secondary--color: #179510;
+
+    --font--white--color: #fff;
+    --font--gray--color: rgba(255, 255, 255, .75);
+    --font--black--color: #121212;
+
+    --bg--first--color: #404040;
+    --bg--second--color: #121212;
+    --bg--third--color: #0F0F0F;
+
+
+    /* ======== button Colors =======  */
+
+    --button--primary--bg--color: #1ECB15;
+    --button--secondary--bg--color: #179510;
+    --button--font--color: #fff;
+
+    /* ======== Font Weight =======  */
+
+    --weight--normal: 400;
+    --weight--semibold: 500;
+    --weight--bold: 600;
+    --weight--bolder: 700;
+
+    /* ======== Font Size =======  */
+
+    --largest--font-size: 5rem;
+    --large--font-size: 4rem;
+    --small--font-size:2rem;
+    --smallest--font-size: 1.6rem;
+    --middle--font-size: 2.5rem;
+
+    /* ======== Extra Size =======  */
+
+    --primary--size: 3.2rem;
+
+     /* ======== Z-Index =======  */
+     
+    --normal--z-index:1;
+    --second--normal--z-index:99;
+
+    --largest--z-index:999;
+    --smallest--z-index:9;
+
+    --negative--z-index: -99;
+
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;   /*  Default Font size 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;    /* Roboto Family */
+    font-style: var(--weight--normal);
+    background-color: var(--body--main--color);
+    color: var(--font--black--color);
+    overflow-x: hidden;
+}

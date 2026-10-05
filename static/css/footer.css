@@ -1,0 +1,121 @@
+/* ==================== Footer =================== */
+
+
+.footer{
+    background-color: var(--bg--second--color);
+}
+
+.footer p{
+    color: var(--font--gray--color);
+}
+
+.footer__container{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    min-height: 50vh;
+    padding: 7rem 2rem;
+}
+
+.footer__about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+    width: 27%;
+    border-right: 3px solid var(--font--secondary--color);
+    text-align: justify;
+    padding-right: 3rem;
+}
+
+.footer__contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+    width: 28%;
+    border-right: 3px solid var(--font--secondary--color);
+    padding-right: 3rem;
+}
+
+.footer__contact__content{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+}
+
+
+.footer__contact__content i{
+    background-color: transparent;
+    color: var(--font--primary--color);
+    font-size: var(--small--font-size);
+    padding: 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    padding-top: 0.5rem;
+}
+
+.footer__quick__link{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 1rem;
+    row-gap: 1.5rem;
+    width: 15%;
+    border-right: 3px solid var(--font--secondary--color);
+}
+
+.footer__social{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-top: 1.5rem;
+}
+
+.footer__social__links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer__social__links i{
+    font-size: var(--small--font-size);
+    width: 40px;
+    height: 40px;
+}
+
+.footer__social__links i:hover {
+    box-shadow: 0px 6px 20px var(--font--primary--color); /* Larger shadow for a more pronounced effect */
+}
+
+
+.footer__rental{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__rental img{
+    object-fit: cover;
+    width: 155px;
+    height: 70px;
+    padding: 1rem;
+}
+
+.footer__container a{
+    font-size: 1.8rem;
+    transition: all 0.2s ease-in-out;
+}
+.footer__container a:hover{
+    color: #1ECB15;
+}
+.footer__paragraph{
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--font--gray--color);
+}

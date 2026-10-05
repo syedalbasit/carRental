@@ -1,0 +1,309 @@
+/* ==================== utility Classes =================== */
+
+.container {
+    max-width: 90%;
+    margin: 4rem auto;
+}
+
+h1 {
+    font-size: var(--largest--font-size);
+    color: var(--font--white--color);
+    line-height: 50px;
+    font-weight: var(--weight--normal);
+}
+
+h2 {
+    font-size: var(--large--font-size);
+    color: var(--font--black--color);
+    font-weight: var(--weight--bolder);
+}
+
+h3 {
+    color: var(--font--white--color);
+    font-size: var(--middle--font-size);
+}
+
+h4 {
+    font-size: var(--small--font-size);
+    color: var(--font--white--color);
+    font-weight: var(--weight--semibold);
+    line-height: 50px;
+}
+
+p {
+    font-size: var(--smallest--font-size);
+    color: var(--font--black--color);
+    line-height: 25px;
+}
+
+a {
+    color: var(--font--gray--color);
+    font-size: var(--smallest--font-size);
+    text-decoration: none;
+    z-index: var(--largest--z-index);
+}
+
+button {
+    position: relative;
+    font-weight: var(--weight--bold);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+i {
+    font-size: var(--primary--size);
+    color: var(--font--white--color);
+    width: 5.4rem;
+    height: 5.4rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: var(--button--primary--bg--color);
+    transition: all 0.3s ease-in-out;
+}
+
+ul {
+    list-style: none;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.secondary__btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+    background-color: var(--button--primary--bg--color);
+    color: var(--font--white--color);
+    transition: all 0.5s ease-in-out;
+}
+
+.primary__btn {
+    background-color: var(--button--secondary--bg--color);
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+    color: var(--font--white--color);
+    transition: all 0.5s ease-in-out;
+}
+
+.primary__btn::before,
+.secondary__btn::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 1%;
+    width: 0%;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.primary__btn::after,
+.secondary__btn::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    height: 1%;
+    width: 0%;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.primary__btn:hover,
+.secondary__btn:hover {
+    border-radius: 0%;
+    box-shadow: 0px 0px 10px 1px var(--font--secondary--color);
+}
+
+.primary__btn:hover::after,
+.primary__btn:hover::before,
+.secondary__btn:hover::before,
+.secondary__btn:hover::after {
+    width: 100%;
+}
+
+.top {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 0.5%;
+    background-color: var(--font--white--color);
+    transition: all 0.5s ease-in-out;
+}
+
+
+.bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0%;
+    width: 0.5%;
+    background-color: var(--font--white--color);
+    transition: all 0.5s ease-in-out;
+}
+
+button:hover .top,
+button:hover .bottom {
+    height: 100%;
+}
+
+.styling__content {
+    display: inline-block;
+    color: var(--font--primary--color);
+}
+
+.upper__styling {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--button--secondary--bg--color);
+    background-color: rgba(0, 0, 0, .1);
+    padding: 0.5rem 0.8rem;
+    font-weight: var(--weight--bolder);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.underline__style {
+    display: block;
+    width: 7%;
+    height: 5px;
+    background-color: var(--font--primary--color);
+    margin: 1rem auto;
+    transform: skewX(-50deg);
+}
+.toast {
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    padding-right: 3rem;
+    position: fixed;
+    top: 5%;
+    right: 4%;
+    column-gap: 1rem;
+    z-index: 99999;
+    background-color: var(--font--white--color);
+    border-left: 4px solid var(--font--primary--color);
+    box-shadow: 0px 0px 8px 0px rgba(164, 164, 186, 0.2);
+    overflow: hidden;
+    transform: translateX(150%);
+}
+
+.toast span {
+    display: block;
+    height: 3px;
+    background-color: var(--font--primary--color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.toastBoderAnimation{
+    animation: toastAnimation 2s linear forwards;
+}
+
+.toastanimate {
+    animation: toastAnimateIn 0.4s linear forwards;
+}
+
+.toastanimateout {
+    animation: toastAnimateOut 0.4s linear forwards;
+}
+
+@keyframes toastAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes toastAnimateIn {
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes toastAnimateOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(150%);
+    }
+}
+
+.toast__message h4 {
+    font-size: 1.7rem;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.toast__message p {
+    font-size: 1.4rem;
+}
+
+.toast .toast__link i {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    font-size: 1.5rem;
+    padding: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.scroll-up {
+    background-color: var(--button--primary--bg--color);
+    border-radius: 6px;
+    padding: 1.2rem 1.4rem;
+    position: fixed;
+    bottom: 30px;
+    right: 1%;
+    transition: all 0.5s ease-in-out;
+    z-index: var(--largest--z-index);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(100px);
+    pointer-events: none; /* Prevent click events when hidden */
+}
+
+.scroll-up img {
+    width: 15px;
+    object-fit: cover;
+}
+
+.scroll-up.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable click events when shown */
+    animation: bounce 1.5s infinite; /* Continuous up and down animation */
+}
+
+/* Keyframes for the continuous up and down animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Remove the hover effect */
+.scroll-up:hover {
+    transform: none;
+}
